@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "server"
+version = "0.1.0"
+description = "dspy server w/ SSE"
+authors = ["Nick Bukovec <nbukovec@calpoly.edu>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "~3.10"
+dspy-ai = "^2.4.9"
+fastapi = "^0.111.0"
+sse-starlette = "^2.1.0"
+uvicorn = "^0.29.0"
+boto3 = "^1.34.108"
+janus = "^1.0.0"
+aioprocessing = "^2.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

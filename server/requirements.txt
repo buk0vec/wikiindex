@@ -1,0 +1,7 @@
+dspy-ai
+fastapi
+sse-starlette
+uvicorn
+boto3
+janus
+aioprocessing

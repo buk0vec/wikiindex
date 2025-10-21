@@ -1,0 +1,128 @@
+{
+  "generate_query[0]": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "dspy_uuid": "7f02f11d-9a56-4d60-a49d-0793a96dde53",
+        "context": [
+          "Mia Farrow is an English-American actress who starred in Widows' Peak. However, she is not commonly known as a Dame. The English actress commonly known as a Dame in the context of Widows' Peak is Joan Plowright.",
+          "Joan Plowright, an English actress, is commonly known as Dame. She is the actress involved in \"Widows' Peak\" as stated in the context."
+        ],
+        "question": "Widows' Peak stars what English actress commonly known as  Dame",
+        "rationale": "1. Identify the movie \"Widows' Peak\" and the English actress.\n2. Use keywords related to the movie title, the actress' nationality, and her common nickname \"Dame\".",
+        "query": "\"Widows' Peak movie actress English nationality Dame\""
+      },
+      {
+        "question": "Who was the star of \"The Perks of Being a Wallflower\" and also starred as the title character in the drama \"We Need to Talk About Kevin\" (2011)?",
+        "answer": "Ezra Matthew Miller",
+        "dspy_uuid": "258f41e2-83a7-4ab5-b635-240b895d0724",
+        "dspy_split": "train"
+      }
+    ],
+    "signature_instructions": "\n    You are an advanced multi-hop information retrieval system.\n    Write a single simple search query to find more information to help answer a question that requires multiple retrieval hops. This query will be embedded into a vector which will be compared with other embedding vectors, so make sure to include important specific keywords for the query. \n    \n    ",
+    "signature_prefix": "Query:",
+    "extended_signature_instructions": "You are an advanced multi-hop information retrieval system.\n    Write a single simple search query to find more information to help answer a question that requires multiple retrieval hops. This query will be embedded into a vector which will be compared with other embedding vectors, so make sure to include important specific keywords for the query.",
+    "extended_signature_prefix": "Query:"
+  },
+  "generate_query[1]": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "dspy_uuid": "58d5f3a2-e5ef-4fd5-9437-29c30a6d64b9",
+        "context": [
+          "- Jana Roso\u0142a Street: Connects to Warsaw's section of National road 2, which is part of European route E30.\n- Stryje\u0144skich Street: Does not mention any connection to a 6,500 km international road.\n\nBased on the given context, Jana Roso\u0142a Street is the answer.",
+          "The street, Roso\u0142a, connects to Warsaw's section of National road 2, which is part of European route E30. This road is a significant international route, and a part of the Trans-Siberian Highway."
+        ],
+        "question": "What main thoroughfare in Warsaw's borough of Ursyn\u00f3w connects to a 6,500 km international road which coincides with the Trans-Siberian Highway?",
+        "rationale": "Query: \"International road E30 connection in Warsaw's Ursyn\u00f3w borough. Specifically, find the name of the main thoroughfare.\"",
+        "query": "\"Main street in Warsaw's Ursyn\u00f3w borough connecting to European route E30\""
+      },
+      {
+        "question": "When was the American actor born who played by Travis Schuldt from July 5, 1999 to July 3, 2002?",
+        "answer": "September 18, 1974",
+        "dspy_uuid": "cf2caf90-092f-419c-a00b-566093e29a2b",
+        "dspy_split": "train"
+      }
+    ],
+    "signature_instructions": "\n    You are an advanced multi-hop information retrieval system.\n    Write a single simple search query to find more information to help answer a question that requires multiple retrieval hops. This query will be embedded into a vector which will be compared with other embedding vectors, so make sure to include important specific keywords for the query. \n    \n    ",
+    "signature_prefix": "Query:",
+    "extended_signature_instructions": "You are an advanced multi-hop information retrieval system designed to craft precise and effective search queries. Your task is to generate a single, comprehensive search query that encapsulates the critical keywords needed to retrieve information across multiple related topics. Focus on identifying and including significant terms from both the context and the question, ensuring the query effectively links the various elements needed to answer the question.",
+    "extended_signature_prefix": "Generate a search query combining key elements from the context and question:"
+  },
+  "retrieve": {
+    "k": 5
+  },
+  "summarize_context[0]": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "dspy_uuid": "bcb3250f-97cf-4bdc-9d2c-2543d81f97b5",
+        "context": [
+          "Battle of Belleau Wood | The Battle of Belleau Wood (1\u201326 June 1918) was a major battle that occurred during the German spring offensive in World War I, near the Marne River in France. The battle was fought by the U.S. 2nd (under the command of Major General Omar Bundy) and 3rd Divisions along with French and British forces against an assortment of German units including elements from the 237th, 10th, 197th, 87th, and 28th Divisions. The battle has become a key component of United States Marine Corps lore.",
+          "Battle of Leyte | The Battle of Leyte (Filipino: Labanan sa Leyte; Waray: Gubat ha Leyte; Japanese: \u30ec\u30a4\u30c6\u306e\u6226\u3044) in the Pacific campaign of World War II was the amphibious invasion of the island of Leyte in the Philippines by American forces and Filipino guerrillas under the overall command of General Douglas MacArthur, who fought against the Imperial Japanese Army in the Philippines led by General Tomoyuki Yamashita. The operation, codenamed King Two, launched the Philippines campaign of 1944\u201345 for the recapture and liberation of the entire Philippine Archipelago and to end almost three years of Japanese occupation.",
+          "Battle of Leyte order of battle | On 20 October 1944, troops of the United States Sixth Army under the direct command of Lieutenant General Walter Krueger, invaded the Philippine island of Leyte. This operation was the beginning of General Douglas MacArthur's fulfillment of his promise in March 1942 to the Filipino people that he would liberate them from  Japanese rule."
+        ],
+        "question": "Which lasted longer, the Battle of Belleau Wood or the Battle of Leyte?",
+        "rationale": "1. Identify the duration of each battle from the context.\n2. Compare the lengths of the battles to determine which one lasted longer.",
+        "summary": "- The Battle of Belleau Wood lasted from 1\u201326 June 1918.\n- The Battle of Leyte took place from October 20, 1944, onwards.\n\nBased on the provided context, the Battle of Leyte started later and is still ongoing, as it is mentioned to have begun on October 20, 1944, while the Battle of Belleau Wood ended on June 26, 1918. Therefore, the Battle of Belleau Wood lasted longer than the Battle of Leyte according to the information given."
+      },
+      {
+        "question": "Who composed the BQF and afrofuturist movement blueprint with Camae Ayewa?",
+        "answer": "Rasheedah Phillips",
+        "dspy_uuid": "38dfad2a-6e74-4947-89a7-d445794b67df",
+        "dspy_split": "train"
+      }
+    ],
+    "signature_instructions": "\n    You are an advanced multi-hop information retrieval system.\n    Summarize the context to only contain relevant information to the question. If a fact may be useful later in determining an answer to the question, include it. \n    ",
+    "signature_prefix": "Summary:",
+    "extended_signature_instructions": "You are an expert knowledge extraction engine designed to answer factual questions efficiently by summarizing the context to highlight only the most relevant information. When presented with a question, distill the context to include only details that directly contribute to answering that question. If a piece of information might be useful for forming a comprehensive answer, make sure to retain it. Provide clear, concise, and precise answers, relying on the relevant information distilled from the context.",
+    "extended_signature_prefix": "Based on the context, here is the essential information to answer the question:"
+  },
+  "summarize_context[1]": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature_instructions": "\n    You are an advanced multi-hop information retrieval system.\n    Summarize the context to only contain relevant information to the question. If a fact may be useful later in determining an answer to the question, include it. \n    ",
+    "signature_prefix": "Summary:",
+    "extended_signature_instructions": "You are an advanced multi-hop information retrieval system.\n    Summarize the context to only contain relevant information to the question. If a fact may be useful later in determining an answer to the question, include it.",
+    "extended_signature_prefix": "Summary:"
+  },
+  "generate_answer": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "dspy_uuid": "2c7a712c-6537-4daf-98fd-26255fdb7b34",
+        "context": [
+          "- Gulfstream International Airlines was a US airline that operated from 1988 to 2010.\n- It primarily operated codeshare flights for major airlines.\n- In December 2010, the airline went bankrupt and its assets were sold.\n- Silver Airways launched as a new regional carrier with assets from Gulfstream.\n\nThere is no direct information in the context about the specific airport where Silver Airways, the successor of Gulfstream International Airlines, is based. However, the context does not exclude the possibility that Silver Airways could be based in the US, as it was formed from the assets of Gulfstream International Airlines. Therefore, the context does not provide a definitive answer to the question, but it may be useful to note that Silver Airways is a US-based regional carrier that emerged from the bankruptcy of Gulfstream International Airlines.",
+          "The original name of the airline was Gulfstream International Airlines. It is currently headquartered in Hollywood, Florida near Fort Lauderdale."
+        ],
+        "question": "Gulfstream International Airlines later became a regional carrier based out of what airport?",
+        "rationale": "answer the question. We know from context [2] that Gulfstream International Airlines is currently headquartered in Hollywood, Florida. Therefore, it can be inferred that Silver Airways, the successor of Gulfstream International Airlines, is also likely to be based in Hollywood, Florida.",
+        "answer": "Hollywood, Florida"
+      },
+      {
+        "question": "Which of Adelaide Metro's stations is located at the base of the Mount Lofty Ranges?",
+        "answer": "Belair railway station",
+        "dspy_uuid": "7611563c-2d92-4643-986d-25dfdbd1cc76",
+        "dspy_split": "train"
+      }
+    ],
+    "signature_instructions": "\n    You are an advanced multi-hop information retrieval system powered by generative AI.\n    Answer questions with short factoid answers. You will be given facts you can use to support your answer, although you may not need them based on your vast training data.\n    ",
+    "signature_prefix": "Answer:",
+    "extended_signature_instructions": "You are a knowledge expert tasked with answering a wide range of factual questions across numerous domains, including history, geography, and film. Use the provided context to extract precise and concise answers to the questions asked. Typically, questions will start with \"Who,\" \"What,\" \"Where,\" \"When,\" \"Why,\" or \"How,\" and your answers should be clear, direct, and informed by the given context.",
+    "extended_signature_prefix": "Answer:"
+  }
+}

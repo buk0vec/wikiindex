@@ -1,0 +1,3 @@
+[submodule "rag-explorer-frontend"]
+	path = rag-explorer-frontend
+	url = https://github.com/buk0vec/wikiindex-frontend

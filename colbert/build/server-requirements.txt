@@ -1,0 +1,3 @@
+colbert-ai[torch]
+flask
+dotenv
